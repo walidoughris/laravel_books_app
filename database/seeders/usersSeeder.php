@@ -16,20 +16,20 @@ class usersSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name'=>'',
-                'avatar'=>'',
-                'is_admin'=>'',
-                'is_active'=>'',
-                'email'=>'',
-                'password'=>''
+                'name'=>'oughris walid',
+                'avatar'=>'storage/images/users_profiles_images/man2.png',
+                'is_admin'=>true,
+                'is_active'=>true,
+                'email'=>'oughwalid@gmail.com',
+                'password'=>'walidwalid'
             ],
             [
-                'name'=>'',
-                'avatar'=>'',
-                'is_admin'=>'',
-                'is_active'=>'',
-                'email'=>'',
-                'password'=>''
+                'name'=>'user 1',
+                'avatar'=>'storage/images/users_profiles_images/profileImg.png',
+                'is_admin'=>false,
+                'is_active'=>true,
+                'email'=>'user1@gmail.com',
+                'password'=>'user1'
             ]
         ]);
     }

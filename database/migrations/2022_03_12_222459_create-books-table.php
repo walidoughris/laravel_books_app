@@ -15,6 +15,7 @@ class CreateBooksTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title')->unique();
             $table->string('description');
             $table->string('writer');
@@ -36,6 +37,10 @@ class CreateBooksTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('favorit_books');
+        Schema::dropIfExists('reading_now');
+        Schema::dropIfExists('finised_reading');
+        Schema::dropIfExists('comments');
+        Schema::dropIfExists('dowlonds_links');
     }
 }

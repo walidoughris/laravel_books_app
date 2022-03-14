@@ -19,7 +19,7 @@ class CreateDowlondsLinksTable extends Migration
             $table->string('url');
             $table->float('file_size');
             $table->boolean('is_active');
-            $table->foreignId('book_id')->references('id')->on('books');
+            $table->foreignId('book_id')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
