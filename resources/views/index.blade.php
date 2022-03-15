@@ -1,3 +1,7 @@
+@php
+    use Carbon\Carbon;
+    Carbon::setLocale(app()->getLocale());
+@endphp
 @extends('layout.template')
 
 @section('title','home')
@@ -115,7 +119,7 @@
               </svg><span>{{$book->writer}}</span><span>|</span>
               <svg class="w-4 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg><span>{{$book->publised_date}}</span>
+              </svg><span>{{Carbon::parse($book->publised_date)->translatedFormat('M Y')}}</span>
             </div>
             <p class="card-text">{{$book->description}}</p>
           </div>
