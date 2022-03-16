@@ -10,10 +10,10 @@
   <body dir="rtl">
     <main class="grid grid-cols-5 container bg-darkBlue-dark m-auto">
         {{--  sidebar  --}}
-        @include('layout.sidebar')
+        @include('layout._sidebar')
         <div class="container col-start-2 col-span-4">
             {{-- header --}}
-            @include('layout.header')
+            @include('layout._header')
             {{-- page content --}}
             <section class="content content-height overflow-y-scroll py-4 px-10 rounded-tr-3xl bg-darkBlue-ligth">
               @yield('content')

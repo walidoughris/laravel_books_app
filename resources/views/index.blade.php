@@ -7,6 +7,7 @@
 @section('title','home')
 
 @section('content')
+
    <h4 class="text-gray-400 mb-5 font-extrabold text-lg">الاكتر شهرة</h4>
    <div class="flex flex-wrap">
      {{--   start book card   --}}
@@ -74,7 +75,7 @@
     {{--   start book card   --}}
     <div class="card-book relative">
         <div class="card-body bg-darkBlue-dark hover:bg-darkBlue-secondary">
-          <div class="card-image"> <img class="w-full h-full" src="{{asset($book->cover_img)}}"></div>
+          <div class="card-image">{{--   book cover image --}} <img class="w-full h-full" src="{{asset($book->cover_img)}}"></div>
           <div class="card-content h-full"> 
             <h5 class="card-title">{{$book->title}}</h5>
             {{--    start book rating    --}}
@@ -123,7 +124,7 @@
             </div>
             <p class="card-text">{{$book->description}}</p>
           </div>
-        </div>{{--   card link    --}}<a class="card-link" href="/book.html"></a>
+        </div>{{--   card link    --}}<a class="card-link" href="{{route('book.detailes',['id'=>$book->id])}}"></a>
         <div class="favorite-icon favorite-icon-active" title="حدف من المفضلة">
           <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
@@ -133,4 +134,5 @@
       {{--   end book card   --}}
       @endforeach
    </div>
+   
 @endsection
