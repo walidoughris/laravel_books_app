@@ -22,4 +22,9 @@ class BookController extends Controller
         $book = Book::findOrFail($id);
        return view('book_detailes',['book'=>$book]);
     }
+
+    public function ShowBookComments($id){
+        $book = Book::findOrFail($id);
+       return view('book_comments',['book'=>$book]);
+    }
 }

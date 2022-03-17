@@ -1,6 +1,6 @@
 <aside class="col-start-1 col-end-2 relative"><i class="fa fa-user"></i>
     <nav class="h-screen text-darkBlue-primary pt-4 fixed right-16">
-      <div class="logo font-extrabold text-6xl pt-2 text-center text-white ">اقرأ</div>
+      <div class="logo font-extrabold text-6xl pt-2 text-center text-white "><a href="{{route('home')}}">اقرأ</a></div>
       <div class="flex justify-center items-center flex-col mt-16 font-bold">
         <ul class="text-base">
           <li class="py-1 active-link list-none relative link-hover pointer-events-auto"><a href="/">الصفحة الرئيسية
