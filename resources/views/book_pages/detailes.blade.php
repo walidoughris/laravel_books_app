@@ -8,6 +8,7 @@
 
 @section('content')
 
+  <div class="container" data-page=" book_detailes">
     {{--  include the book navbar  --}}
     @include('layout._books_navbar')
     <div class="details p-2 flex flex-nowrap"> 
@@ -149,5 +150,6 @@
                 </table>
               </div>
               {{--  end dawlonds links --}}
+  </div>
 
 @endsection

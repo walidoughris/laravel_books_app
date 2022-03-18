@@ -8,7 +8,8 @@
 
 @section('content')
 
-   <h4 class="text-gray-400 mb-5 font-extrabold text-lg">الاكتر شهرة</h4>
+  <div class="container" data-page="home_page">
+  <h4 class="text-gray-400 mb-5 font-extrabold text-lg">الاكتر شهرة</h4>
    <div class="flex flex-wrap">
      {{--   start book card   --}}
     <div class="card-book relative">

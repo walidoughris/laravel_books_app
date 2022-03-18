@@ -18,13 +18,28 @@ class BookController extends Controller
         return view('index',['last_added_books'=>$last_added_books]);
     }
     
+    public function ShowFavoritBooksList(){
+        $favorit_books = Book::all();
+       return view('book_pages.favorites_books',['favorit_books'=>$favorit_books]);
+    }
+
+    public function ShowPupulaireBooksList(){
+        $pupulaire_books = Book::all();
+       return view('book_pages.pupulaire_books',['pupulaire_books'=>$pupulaire_books]);
+    }
+
     public function ShowBookDetailes($id){
         $book = Book::findOrFail($id);
-       return view('book_detailes',['book'=>$book]);
+       return view('book_pages.detailes',['book'=>$book]);
     }
 
     public function ShowBookComments($id){
         $book = Book::findOrFail($id);
-       return view('book_comments',['book'=>$book]);
+       return view('book_pages.comments',['book'=>$book]);
+    }
+
+    public function BooksCherch(){
+        $books = Book::all();
+       return view('book_pages.cherche',['books'=>$books]);
     }
 }

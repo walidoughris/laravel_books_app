@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [BookController::class,'Index'])->name('home');
+Route::get('/book/favorit_books', [BookController::class,'ShowFavoritBooksList'])->name('book.favorit_list');
+Route::get('/book/pupulaire_books', [BookController::class,'ShowPupulaireBooksList'])->name('book.pupulare_list');
 Route::get('/book/detailes/{id}', [BookController::class,'ShowBookDetailes'])->name('book.detailes');
 Route::get('/book/comments/{id}', [BookController::class,'ShowBookComments'])->name('book.comments');
+Route::get('/book/cherch', [BookController::class,'BooksCherch'])->name('book.cherch');

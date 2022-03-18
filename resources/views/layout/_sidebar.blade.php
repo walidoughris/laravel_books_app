@@ -3,21 +3,21 @@
       <div class="logo font-extrabold text-6xl pt-2 text-center text-white "><a href="{{route('home')}}">اقرأ</a></div>
       <div class="flex justify-center items-center flex-col mt-16 font-bold">
         <ul class="text-base">
-          <li class="py-1 active-link list-none relative link-hover pointer-events-auto"><a href="/">الصفحة الرئيسية
+          <li class="{{request()->routeIs('home') ? 'active-link' : ''}} py-1 list-none relative link-hover pointer-events-auto"><a href="/">الصفحة الرئيسية
               <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
               </svg></a></li>
-          <li class="py-1  list-none relative link-hover"><a href="/discover.html">اكتشف</a>
+          <li class="{{request()->routeIs('book.cherch') ? 'active-link' : ''}} py-1  list-none relative link-hover"><a href="{{route('book.cherch')}}">اكتشف</a>
             <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </li>
-          <li class="py-1 list-none relative link-hover"><a href="/mostReades.html">الاكتر قراءة</a>
+          <li class="{{request()->routeIs('book.pupulare_list') ? 'active-link' : ''}} py-1 list-none relative link-hover"><a href="{{route('book.pupulare_list')}}">الاكتر قراءة</a>
             <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
               <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path>
             </svg>
           </li>
-          <li class="py-1  list-none relative link-hover"><a href="/favorite.html">المفضلة</a>
+          <li class="{{request()->routeIs('book.favorit_list') ? 'active-link' : ''}} py-1  list-none relative link-hover"><a href="{{route('book.favorit_list')}}">المفضلة</a>
             <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>

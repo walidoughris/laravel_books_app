@@ -8,7 +8,7 @@
 
 @section('content')
 
-  <div class="container" data-page="bookComments">
+  <div class="container" data-page="book_comments">
     {{--  include the book navbar  --}}
     @include('layout._books_navbar')
     {{--  start add comment form --}}
